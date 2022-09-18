@@ -3,14 +3,21 @@ class Sample
 {
     public static void main(String args[])
     {
-        int n;
         Scanner sc=new Scanner(System.in);
+        int n;
         n=sc.nextInt();
         for(int i=1;i<=n;i++)
         {
-            for(int j=n;j>=1;j--)
+            for(int j=1;j<=n;j++)
             {
-                System.out.print(j+" ");
+                if(j==i)
+                {
+                    System.out.print("0");
+                }
+                else
+                {
+                    System.out.print("x");
+                }
             }
             System.out.println();
         }
