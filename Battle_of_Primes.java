@@ -3,6 +3,8 @@ class Sample
 {
     public static boolean isprime(int n)
     {
+        if(n<2)
+          return false;
         int count=0;
         for(int i=2;i<=(int)Math.sqrt(n);i++)
         {
@@ -10,26 +12,25 @@ class Sample
             count++;
         }
         if(count==0)
-           return true;
+            return true;
         else
-           return false;
+            return false;
     }
     public static void main(String args[])
     {
-        int n1,n2,c=0,i,sum=0;
+        int c,i,s,a,b;
         Scanner sc=new Scanner(System.in);
-        n1=sc.nextInt();
-        n2=sc.nextInt();
-        sum=n1+n2;
-        for(i=sum+1;;i++)
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=a+b;
+        for(i=c+1;;i++)
         {
-            c++;
             if(isprime(i))
             {
-            break;
+                s=i;
+                break;
             }
         }
-        System.out.println(c);
-        
+        System.out.println(s-c);
     }
 }
