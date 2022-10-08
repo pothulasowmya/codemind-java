@@ -1,9 +1,10 @@
 import java.util.Scanner;
 class Sample
 {
-    public static boolean isPrime(int n)
+    public static boolean isprime(int n)
     {
-        
+        if(n<2)
+        return false;
         int count=0;
         for(int i=2;i<=(int)Math.sqrt(n);i++)
         {
@@ -11,11 +12,11 @@ class Sample
             count++;
         }
         if(count==0)
-          return true;
+            return true;
         else
-          return false;
+            return false;
     }
-    public static boolean isPalindrome(int n)
+     public static boolean ispalindrome(int n)
     {
         int temp=n;
         int sum=0,r;
@@ -32,18 +33,17 @@ class Sample
     }
     public static void main(String args[])
     {
-        int n;
+        int n,i;
         Scanner sc=new Scanner(System.in);
         n=sc.nextInt();
-        for(int i=n+1;;i++)
+        for(i=n+1;;i++)
         {
-            if(isPrime(i) && isPalindrome(i))
+            if(isprime(i) && ispalindrome(i))
             {
-              System.out.println(i);
-              break;
+                System.out.println(i);
+                break;
             }
         }
        
     }
-    
 }
