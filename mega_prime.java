@@ -30,18 +30,18 @@ class Sample
 	        n=n/10;
 	    }
 	    if(s==c)
-	       return true;
-	   else
-	       return false;
+	      return true;
+	    else
+	      return false;
 	}
-    public static void main(String args[])
-    {
-        int n;
-        Scanner sc=new Scanner(System.in);
-        n=sc.nextInt();
-        if(isprime(n)  && mega(n))
-          System.out.println("Mega Prime");
-        else
-          System.out.println("Not Mega Prime");
-    }
+	public static void main(String args[])
+	{
+	    int n;
+	    Scanner sc=new Scanner(System.in);
+	    n=sc.nextInt();
+	    if(isprime(n)  && mega(n))
+	       System.out.println("Mega Prime");
+	   else
+	       System.out.println("Not Mega Prime");
+	}
 }
