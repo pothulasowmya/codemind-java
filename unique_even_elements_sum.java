@@ -1,28 +1,31 @@
- import java.util.Scanner;
- class sample
- {
-     public static void main(String args[])
-     {
-         int n,x[],i,s=0;
-         Scanner sc=new Scanner(System.in);
-         n=sc.nextInt();
-         x=new int[n];
-         for (i=0;i<n;i++)
-            x[i]=sc.nextInt();
+import java.util.Scanner;
+class Sample
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n,x[],j,i,r,m=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+           x[i]=sc.nextInt();
         for(i=0;i<n;i++)
         {
-            if(x[i]!=-999 &&x[i]%2==0)
+            r=x[i];
+            if(x[i]!=-999)
             {
-                for(int j=0;j<n;j++)
+                for(j=0;j<n;j++)
                 {
-                    if(x[i]==x[j]&&i!=j)
+                    if(x[j]==x[i] && i!=j)
                     {
-                        x[j]=-999;
+                      x[j]=-999;  
                     }
                 }
-                s=s+x[i];
+                if(x[i]%2==0)
+                m+=x[i];
             }
+            
         }
-        System.out.println(s);
-     }
- }
+        System.out.println(m);
+    }
+}
