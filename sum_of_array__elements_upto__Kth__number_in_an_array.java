@@ -3,19 +3,19 @@ class Sample
 {
     public static void main(String args[])
     {
-        int n,x[],i,c=0,k;
+        int n,x[],s=0,i,a;
         Scanner sc=new Scanner(System.in);
         n=sc.nextInt();
         x=new int[n];
         for(i=0;i<n;i++)
-          x[i]=sc.nextInt();
-        k=sc.nextInt();
+           x[i]=sc.nextInt();
+        a=sc.nextInt();
         for(i=0;i<n;i++)
         {
-            c+=x[i];
-            if(k==x[i])
+            s+=x[i];
+            if(x[i]==a)
             break;
         }
-        System.out.println(c);
+        System.out.println(s);
     }
 }
