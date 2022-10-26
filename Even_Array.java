@@ -3,8 +3,8 @@ class Sample
 {
     public static void main(String args[])
     {
-        int n,x[],i,c=0;
         Scanner sc=new Scanner(System.in);
+        int n,x[],i,c=0,j,r;
         n=sc.nextInt();
         x=new int[n];
         for(i=0;i<n;i++)
@@ -12,14 +12,11 @@ class Sample
         for(i=0;i<n;i++)
         {
             if(x[i]%2==0)
-            {
-                c++;
-            }
+            c++;
         }
         if(c==n)
-           System.out.println("True");
+            System.out.println("True");
         else
-             System.out.println("False");
-        
+            System.out.println("False");
     }
 }
