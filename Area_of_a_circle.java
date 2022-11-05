@@ -8,6 +8,6 @@ class Sample
         Scanner sc=new Scanner(System.in);
         r=sc.nextInt();
         area=(float)3.14*r*r;
-        System.out.printf("%.2f",area);
+        System.out.format("%.2f",area);
     }
 }
