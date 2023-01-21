@@ -1,37 +1,35 @@
-import java.util.Scanner;
-class Sample
+import java.util.*;
+import java.util.Map.*;
+class sample
 {
-    public static void main(String args[])
+    public static void printout(int arr[])
     {
-        Scanner sc=new Scanner(System.in);
-        int n,x[],i,j,c=0,m=0,r;
-        n=sc.nextInt();
-        x=new int[n];
-        for(i=0;i<n;i++)
-          x[i]=sc.nextInt();
-        for(i=0;i<n;i++)
+        int sum=0,count=0;
+        HashMap<Integer,Integer> hm=new HashMap<>();
+        for(int i=0;i<arr.length;i++)
         {
-            r=x[i];
-            c++;
-            if(x[i]!=-999)
+            hm.put(arr[i],hm.getOrDefault(arr[i],0)+1);
+        }
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]==(int)hm.get(arr[i]))
             {
-                for(j=0;j<n;j++)
-                {
-                    if(x[j]==x[i] && i!=j)
-                    {
-                        c++;
-                        x[j]=-999;
-                    }
-                }
-                if(c==r)
-                {
-                    System.out.print(c+" ");
-                    m++;
-                }
-                c=0;
+              System.out.print(arr[i]+" ");
+               hm.put(arr[i],0);
+               count++;
             }
         }
-        if(m==0)
-            System.out.println("-1");
+        if(count==0)
+         System.out.println("-1");
+    }
+    public static void main(String args[])
+    {
+        int n,x[];
+        Scanner sc=new Scanner(System.in);
+        n=sc.nextInt();
+        x=new int[n];
+        for(int i=0;i<n;i++)
+          x[i]=sc.nextInt();
+        printout(x);
     }
 }
